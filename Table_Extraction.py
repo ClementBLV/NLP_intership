@@ -122,22 +122,24 @@ def is_there_table ( path, model):
     # in the case we have a pdf file 
     if (is_pdf(path)):
         # etract_table (path)
-        direct_table = pdf_as_table(table_extractor(path))
+        if (pdf_as_table(table_extractor(path))): 
+          return True
 
         #extract image 
-        list_names  = image_extrator(path)  
-        for image in list_names:       
-          if image_is_table (image, model):
-            table_image = True
-            number_table_image+=1
-            print("The image is a table")
+        #list_names  = image_extrator(path)  
+        #for image in list_names:       
+        #  if image_is_table (image, model):
+        #    table_image = True
+        #    number_table_image+=1
+        #    print("The image is a table")
 
-        for img in list_names: 
-            os.remove(img)
+        #for img in list_names: 
+        #    os.remove(img)
 
        
-        if (table_image ==False): # deal with the case of the page 8 , like that we don't use 
+        #if (table_image ==False): # deal with the case of the page 8 , like that we don't use 
                                   # the neural network if it is not necessary 
+        else:    
           images = convert_from_path(path)
           for i, image in enumerate(images):
               fname = 'image'+str(i)+'.png'
