@@ -30,7 +30,8 @@ from detectron2.data import MetadataCatalog
 from detectron2.data import DatasetCatalog, MetadataCatalog
 from google.colab.patches import cv2_imshow
 setup_logger()
-
+from pdf2image import convert_from_path
+from PIL import Image
 import os
 
 ##### fonction to extract the table : 
@@ -117,7 +118,7 @@ def is_there_table ( path, model):
     table_image = False
     number_table_image = 0
     number_table_direct = 0
-  
+    names_pages = []
     # in the case we have a pdf file 
     if (is_pdf(path)):
         # etract_table (path)
@@ -134,6 +135,19 @@ def is_there_table ( path, model):
         for img in list_names: 
             os.remove(img)
 
+       
+        if (table_image ==False): # deal with the case of the page 8 , like that we don't use 
+                                  # the neural network if it is not necessary 
+          images = convert_from_path(path)
+          for i, image in enumerate(images):
+              fname = 'image'+str(i)+'.png'
+              image.save(fname, "PNG")
+              names_pages.append(fname)
+              if image_is_table (fname, model):
+                table_image = True
+
+        for img in names_pages: 
+            os.remove(img)
     # in the case the file is directly a png or a jpge
     else :
         if image_is_table (path, model): # here we see if the all page contains tables 
