@@ -9,9 +9,9 @@ Ce programme permet de dire si oui ou non une page (PDF, JPG, PNG) possède un t
 
 **Programme :**
 
-Un premier collab https://colab.research.google.com/drive/1-VlA04t33pdPXv3IJJ9IfAgEhDAUIUJo?usp=sharing , est un collab de démonstration étape par étape des méthodes utilisées. Tous les modules utilisés ainsi que les méthodes qui en découlent y sont implémenté et détaillées clairement. Des exemples visuels sont aussi présents pour un rendu plus concret. Le dataset utilisé est un dataset « maison » constitué de pdf avec des tableaux, des images de tables (Cat8.pdf), des scans jpg et png de pdf avec et sans tableaux. Le dataset est directement importé par le collab depuis GitHub.
+Un premier collab https://colab.research.google.com/drive/1TRVzwZcqeBc1eQ5jAkwi-ER-HY7qrW-T?usp=sharing  , est un collab de démonstration étape par étape des méthodes utilisées. Tous les modules utilisés ainsi que les méthodes qui en découlent y sont implémenté et détaillées clairement. Des exemples visuels sont aussi présents pour un rendu plus concret. Le dataset utilisé est un dataset « maison » constitué de pdf avec des tableaux, des images de tables (Cat8.pdf), des scans jpg et png de pdf avec et sans tableaux. Le dataset est directement importé par le collab depuis GitHub.
 
-Un deuxième collab (https://colab.research.google.com/drive/1TRVzwZcqeBc1eQ5jAkwi-ER-HY7qrW-T?usp=sharing) est beaucoup moins détaillé et importe directement les méthodes réalisées sous forme d’un module python. Son but est de traiter directement les documents sans explication. Le dataset utilisé est un ensemble de documents pdf et jpg (sample).
+Un deuxième collab (https://colab.research.google.com/drive/1-VlA04t33pdPXv3IJJ9IfAgEhDAUIUJo?usp=sharing) est beaucoup moins détaillé et importe directement les méthodes réalisées sous forme d’un module python. Son but est de traiter directement les documents sans explication. Le dataset utilisé est un ensemble de documents pdf et jpg (sample).
 
 **Utilisation :**
 
